@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 함수선언
+    function clock() {
+      // css 선택자를 이용하여 spam요소 검색
+      let spanElement = document.querySelector('#clock');
+      // Date 객체 생성
+      let today = new Date();
+      // 현재 시간을 span 요소의 내용으로 추가
+      spanElement.innerHTML = today.toLocaleTimeString();
+    }
+    // 1초 단위로 함수 실행
+    setInterval(clock, 1000);
+  </script>
+</head>
+<body>
+  <span id="clock"></span>
+</body>
+</html>
